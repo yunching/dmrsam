@@ -1,0 +1,9 @@
+Package: dmrsam
+Title: Utilities To Make RMD Great Again
+Version: 0.1
+Authors@R: person("Yun Ching", "Lim", email = "yunching.lim@gmail.com",
+                  role = c("aut", "cre"))
+Description: Collection of portfolio management utilities
+Depends: R (>= 3.4.4)
+License: GPL (>= 2)
+  LazyData: true

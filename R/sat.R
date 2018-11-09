@@ -1,14 +1,15 @@
 #' Market_capping
 #'
 #' @param mv Vector of market values
-#' @param mv_cap_wts Vector of wts to cap each mv
-#' @param debug Toggle if debugging messages should be displayed
+#' @param capped_wts Vector of weights to cap each market values
 #'
-#' @return A vector of results
+#' @return A vector of results containing capped market values, capped weights, scaling factors and rescaled scaling factors (see Note)
 #' @export
 #'
+#' @examples data(mvs)
+#' @examples data(caps)
 #' @examples market_capping(mvs, caps)
-market_capping <- function(mv, capped_wts, debug=FALSE){
+market_capping <- function(mv, capped_wts){
   #check mv_cap_wts are valid
   if (sum(capped_wts < 0 )){
     stop("There should not be any negative weights in capped_wts")
@@ -60,3 +61,14 @@ market_capping <- function(mv, capped_wts, debug=FALSE){
   return(output)
 }
 
+#' mvs
+#' @name mvs
+#' @docType data
+#' @details Sample market value
+NULL
+
+#' caps
+#' @name caps
+#' @docType data
+#' @details Sample market value caps (as weights)
+NULL

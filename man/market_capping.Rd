@@ -4,11 +4,21 @@
 \alias{market_capping}
 \title{Market_capping}
 \usage{
-market_capping(mv, mv_cap_wts, step_amt = 1e+06, debug = FALSE)
+market_capping(mv, capped_wts)
 }
 \arguments{
-\item{debug}{}
+\item{mv}{Vector of market values}
+
+\item{capped_wts}{Vector of weights to cap each market values}
+}
+\value{
+A vector of results containing capped market values, capped weights, scaling factors and rescaled scaling factors (see Note)
 }
 \description{
 Market_capping
+}
+\examples{
+data(mvs)
+data(caps)
+market_capping(mvs, caps)
 }

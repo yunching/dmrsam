@@ -1,5 +1,6 @@
 context("Market value capping")
 
+library(dmrsam)
 data(mvs)
 data(caps)
 
